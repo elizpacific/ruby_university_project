@@ -1,0 +1,25 @@
+<style>
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 30px 58px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+</style>
+<h3>Welcome to web-application!</h3>
+<h3>Here you can check free information about library and etc.</h3>
+
+<%= link_to "View libraries", libraries_path, :class => 'button'%>
+<%= link_to "View genres", genres_path, :class => 'button'%>
+<%= link_to "View authors", authors_path, :class => 'button'%>
+<%= link_to "View books", books_path, :class => 'button'%>
+
+<h3> Please sing in if you want to add or edit information.</h3>
+
+

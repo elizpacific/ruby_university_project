@@ -1,0 +1,11 @@
+<h2>Add new genre</h2>
+<%= form_for :genre, url: genres_path do |f| %>
+  <p>
+    Name<br>
+    <%= f.text_field(:name, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-success'}) %>
+  </p>
+<% end %>

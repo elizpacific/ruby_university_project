@@ -1,0 +1,14 @@
+<h2>All authors</h2>
+
+<% if current_user %>
+  <%= link_to "Add author", new_author_path, :class => 'btn btn-outline-primary' %>
+<% end %>
+
+<% @author.each do |author| %>
+  <div class="alert alert-light">
+  <h3><%= author.name %>></h3>
+    <% if current_user %>
+    <%= link_to "Read more", author_path(author), :class => 'btn btn-outline-primary' %>
+  </div>
+      <% end %>
+<% end %>

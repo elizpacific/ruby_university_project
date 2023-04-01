@@ -1,0 +1,15 @@
+<h2>All libraries</h2>
+<% if current_user %>
+  <%= link_to "Add library", new_library_path, :class => 'btn btn-outline-primary' %>
+<% end %>
+
+<% @library.each do |library| %>
+  <div class="alert alert-light">
+  <h3>Name: <%= library.name %>></h3>
+  <h3>Address: <%= library.address %>></h3>
+  <h3>Number: <%= library.number %>></h3>
+    <% if current_user %>
+    <%= link_to "Read more", library_path(library), :class => 'btn btn-outline-primary' %>
+  </div>
+      <% end %>
+<% end %>

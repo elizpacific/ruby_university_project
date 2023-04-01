@@ -1,0 +1,12 @@
+<h2>Add new author</h2>
+<%= form_for :author, url: authors_path do |f| %>
+  <p>
+    Author name<br>
+    <%= f.text_field(:name, {:class => 'form-control'}) %>
+  </p>
+
+
+  <p>
+    <%= f.submit({:class => 'btn btn-success'}) %>
+  </p>
+<% end %>

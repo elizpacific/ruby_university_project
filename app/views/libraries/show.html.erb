@@ -1,0 +1,7 @@
+<h3>Library name: <%= @library.name %></h3>
+<h3>Library address: <%= @library.address %></h3>
+<h3>Library number: <%= @library.number %></h3>
+<hr>
+<%= link_to "Edit library", edit_library_path(@library), :class => 'btn btn-warning'%>
+<%= button_to "Delete library", library_path(@library), method: :delete,
+              data: {confirm: "Do you want delete library?"}, :class => 'btn btn-danger'%>

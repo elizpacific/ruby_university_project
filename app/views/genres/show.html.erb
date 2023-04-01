@@ -1,0 +1,4 @@
+<h3><%= @genre.name %></h3>
+<hr>
+<%= link_to "Edit genre", edit_genre_path(@genre), :class => 'btn btn-warning'%>
+<%= button_to "Delete genre", genre_path(@genre), method: :delete %>

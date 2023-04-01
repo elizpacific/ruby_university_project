@@ -1,0 +1,12 @@
+<h2>Edit genre</h2>
+<%= form_for :genre, url: genre_path(@genre), method: :patch do |f| %>
+
+  <p>
+    Genre name<br>
+    <%= f.text_field(:name, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-success'}) %>
+  </p>
+<% end %>

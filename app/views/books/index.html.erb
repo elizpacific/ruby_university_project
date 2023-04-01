@@ -1,0 +1,14 @@
+<h2>All books</h2>
+<% if current_user %>
+  <%= link_to "Add book", new_book_path, :class => 'btn btn-outline-primary' %>
+<% end %>
+
+<% @books.each do |book| %>
+  <div class="alert alert-light">
+  <h3><%= book.name %>></h3>
+  <h3><%= book.description %>></h3>
+    <% if current_user %>
+    <%= link_to "Read more", book_path(book), :class => 'btn btn-outline-primary' %>
+  </div>
+      <% end %>
+<% end %>

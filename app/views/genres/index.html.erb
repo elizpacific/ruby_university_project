@@ -1,0 +1,14 @@
+
+<h2>All our genres</h2>
+<% if current_user %>
+  <%= link_to "Add genre", new_genre_path, :class => 'btn btn-outline-primary' %>
+<% end %>
+
+<% @genre.each do |genre| %>
+  <div class="alert alert-light">
+  <h3><%= genre.name %>></h3>
+    <% if current_user %>
+    <%= link_to "Read more", genre_path(genre), :class => 'btn btn-outline-primary' %>
+  </div>
+      <% end %>
+<% end %>

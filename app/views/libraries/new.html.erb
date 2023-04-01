@@ -1,0 +1,24 @@
+<h2>Add new library</h2>
+<%= form_for :library, url: libraries_path do |f| %>
+  <% if @library.errors.any? %>
+    <% @library.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+  <p>
+    Library name<br>
+    <%= f.text_field(:name, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    Library address<br>
+    <%= f.text_area(:address, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    Library number<br>
+    <%= f.text_area(:number, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-success'}) %>
+  </p>
+<% end %>

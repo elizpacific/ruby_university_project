@@ -1,0 +1,1497 @@
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "books"[0m
+  [1m[35m (142.7ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "libraries"[0m
+  [1m[35m (121.7ms)[0m  [1m[35mCREATE TABLE "libraries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "number" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (122.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (103.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230401120442)[0m
+  [1m[35m (98.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230401114216);
+
+[0m
+  [1m[35m (121.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2023-04-01 12:40:08.185314"], ["updated_at", "2023-04-01 12:40:08.185314"]]
+  [1m[36mTRANSACTION (153.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ccede168ea3f1d6e68b6208d2750d7269f985682"], ["created_at", "2023-04-01 12:40:08.348059"], ["updated_at", "2023-04-01 12:40:08.348059"]]
+  [1m[36mTRANSACTION (101.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 12:40:08.709581', '2023-04-01 12:40:08.709581');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 12:40:08.709581', '2023-04-01 12:40:08.709581');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 12:40:08.710973', '2023-04-01 12:40:08.710973');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 12:40:08.710973', '2023-04-01 12:40:08.710973')[0m
+  [1m[36mTRANSACTION (113.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+LibrariesControllerTest: test_should_destroy_library
+----------------------------------------------------
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+Started DELETE "/libraries/980190962" for 127.0.0.1 at 2023-04-01 15:40:09 +0300
+Processing by LibrariesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLibrary Destroy (0.3ms)[0m  [1m[31mDELETE FROM "libraries" WHERE "libraries"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/libraries
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms | Allocations: 2381)
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+LibrariesControllerTest: test_should_show_library
+-------------------------------------------------
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/libraries/980190962" for 127.0.0.1 at 2023-04-01 15:40:09 +0300
+Processing by LibrariesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering libraries/show.html.erb within layouts/application
+  Rendered libraries/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 747)
+  Rendered layout layouts/application.html.erb (Duration: 352.8ms | Allocations: 71593)
+Completed 200 OK in 360ms (Views: 356.2ms | ActiveRecord: 0.1ms | Allocations: 73889)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+LibrariesControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/libraries/new" for 127.0.0.1 at 2023-04-01 15:40:09 +0300
+Processing by LibrariesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering libraries/new.html.erb within layouts/application
+  Rendered libraries/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2194)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2798)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3207)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+LibrariesControllerTest: test_should_create_library
+---------------------------------------------------
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+LibrariesControllerTest - test_should_create_library: ActionController::UrlGenerationError raised.
+If you expected this exception, use `assert_raises` as near to the code that raises as possible.
+Other block based assertions (e.g. `assert_difference`) can be used, as long as `assert_raises` is inside their block.
+
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+LibrariesControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/libraries" for 127.0.0.1 at 2023-04-01 15:40:09 +0300
+Processing by LibrariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering libraries/index.html.erb within layouts/application
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries"[0m
+  Rendered libraries/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 473)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1005)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1354)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+LibrariesControllerTest: test_should_update_library
+---------------------------------------------------
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (17.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 12:59:59.418377', '2023-04-01 12:59:59.418377');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 12:59:59.418377', '2023-04-01 12:59:59.418377');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 12:59:59.448421', '2023-04-01 12:59:59.448421');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 12:59:59.448421', '2023-04-01 12:59:59.448421')[0m
+  [1m[36mTRANSACTION (151.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+LibrariesControllerTest: test_should_update_library
+---------------------------------------------------
+  [1m[36mLibrary Load (0.5ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/libraries/980190962" for 127.0.0.1 at 2023-04-01 15:59:59 +0300
+Processing by LibrariesController#update as HTML
+  Parameters: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}, "id"=>"980190962"}
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+[31mUnpermitted parameter: :id. Context: { controller: LibrariesController, action: update, request: #<ActionDispatch::Request:0x00007fa791b07080>, params: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}, "controller"=>"libraries", "action"=>"update", "id"=>"980190962"} }[0m
+Redirected to http://www.example.com/libraries/980190962
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms | Allocations: 2760)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 13:00:40.335715', '2023-04-01 13:00:40.335715');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 13:00:40.335715', '2023-04-01 13:00:40.335715');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 13:00:40.338123', '2023-04-01 13:00:40.338123');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 13:00:40.338123', '2023-04-01 13:00:40.338123')[0m
+  [1m[36mTRANSACTION (104.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+LibrariesControllerTest: test_should_create_library
+---------------------------------------------------
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+LibrariesControllerTest - test_should_create_library: ActionController::UrlGenerationError raised.
+If you expected this exception, use `assert_raises` as near to the code that raises as possible.
+Other block based assertions (e.g. `assert_difference`) can be used, as long as `assert_raises` is inside their block.
+
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 13:01:09.234178', '2023-04-01 13:01:09.234178');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 13:01:09.234178', '2023-04-01 13:01:09.234178');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 13:01:09.236305', '2023-04-01 13:01:09.236305');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 13:01:09.236305', '2023-04-01 13:01:09.236305')[0m
+  [1m[36mTRANSACTION (132.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+LibrariesControllerTest: test_should_create_library
+---------------------------------------------------
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLibrary Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+Started POST "/libraries" for 127.0.0.1 at 2023-04-01 16:01:09 +0300
+Processing by LibrariesController#create as HTML
+  Parameters: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}}
+[31mUnpermitted parameter: :id. Context: { controller: LibrariesController, action: create, request: #<ActionDispatch::Request:0x00007ff3949fc1f0>, params: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}, "controller"=>"libraries", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLibrary Create (0.2ms)[0m  [1m[32mINSERT INTO "libraries" ("name", "address", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "MyString"], ["address", "MyString"], ["number", 1], ["created_at", "2023-04-01 13:01:09.580261"], ["updated_at", "2023-04-01 13:01:09.580261"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/libraries/980190963
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 2802)
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 13:08:47.702301', '2023-04-01 13:08:47.702301');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 13:08:47.702301', '2023-04-01 13:08:47.702301');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 13:08:47.703654', '2023-04-01 13:08:47.703654');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 13:08:47.703654', '2023-04-01 13:08:47.703654')[0m
+  [1m[36mTRANSACTION (126.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+LibrariesControllerTest: test_should_create_library
+---------------------------------------------------
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+Started POST "/libraries" for 127.0.0.1 at 2023-04-01 16:08:47 +0300
+Processing by LibrariesController#create as HTML
+  Parameters: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}}
+[31mUnpermitted parameter: :id. Context: { controller: LibrariesController, action: create, request: #<ActionDispatch::Request:0x00007f5ca374bc68>, params: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}, "controller"=>"libraries", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLibrary Create (0.2ms)[0m  [1m[32mINSERT INTO "libraries" ("name", "address", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "MyString"], ["address", "MyString"], ["number", 1], ["created_at", "2023-04-01 13:08:48.016113"], ["updated_at", "2023-04-01 13:08:48.016113"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/libraries/980190963
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 2802)
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 13:09:22.729403', '2023-04-01 13:09:22.729403');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 13:09:22.729403', '2023-04-01 13:09:22.729403');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 13:09:22.747137', '2023-04-01 13:09:22.747137');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 13:09:22.747137', '2023-04-01 13:09:22.747137')[0m
+  [1m[36mTRANSACTION (141.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+LibrariesControllerTest: test_should_create_library
+---------------------------------------------------
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+Started POST "/libraries" for 127.0.0.1 at 2023-04-01 16:09:23 +0300
+Processing by LibrariesController#create as HTML
+  Parameters: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}}
+[31mUnpermitted parameter: :id. Context: { controller: LibrariesController, action: create, request: #<ActionDispatch::Request:0x00007fa2db4bc258>, params: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}, "controller"=>"libraries", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLibrary Create (0.2ms)[0m  [1m[32mINSERT INTO "libraries" ("name", "address", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "MyString"], ["address", "MyString"], ["number", 1], ["created_at", "2023-04-01 13:09:23.072603"], ["updated_at", "2023-04-01 13:09:23.072603"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/libraries/980190963
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 2801)
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 13:40:40.591607', '2023-04-01 13:40:40.591607');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 13:40:40.591607', '2023-04-01 13:40:40.591607');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 13:40:40.596325', '2023-04-01 13:40:40.596325');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 13:40:40.596325', '2023-04-01 13:40:40.596325')[0m
+  [1m[36mTRANSACTION (135.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+BooksControllerTest: test_should_update_book
+--------------------------------------------
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+BooksControllerTest: test_should_show_book
+------------------------------------------
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/books/980190962" for 127.0.0.1 at 2023-04-01 16:40:41 +0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 9.8ms | Allocations: 753)
+  Rendered layout layouts/application.html.erb (Duration: 500.9ms | Allocations: 20661)
+Completed 200 OK in 547ms (Views: 527.2ms | ActiveRecord: 0.1ms | Allocations: 24501)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+BooksControllerTest: test_should_destroy_book
+---------------------------------------------
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mBook Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+Started DELETE "/books/980190962" for 127.0.0.1 at 2023-04-01 16:40:41 +0300
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Destroy (0.2ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/books
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 801)
+  [1m[36mBook Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+BooksControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/books/new" for 127.0.0.1 at 2023-04-01 16:40:41 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 95.8ms | Allocations: 1980)
+  Rendered layout layouts/application.html.erb (Duration: 97.1ms | Allocations: 2581)
+Completed 200 OK in 99ms (Views: 97.8ms | ActiveRecord: 0.0ms | Allocations: 2978)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+BooksControllerTest: test_should_create_book
+--------------------------------------------
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mBook Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+BooksControllerTest - test_should_create_book: NoMethodError raised.
+If you expected this exception, use `assert_raises` as near to the code that raises as possible.
+Other block based assertions (e.g. `assert_difference`) can be used, as long as `assert_raises` is inside their block.
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+BooksControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/books" for 127.0.0.1 at 2023-04-01 16:40:41 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 452)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 984)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1332)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 13:40:57.157099', '2023-04-01 13:40:57.157099');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 13:40:57.157099', '2023-04-01 13:40:57.157099');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 13:40:57.159589', '2023-04-01 13:40:57.159589');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 13:40:57.159589', '2023-04-01 13:40:57.159589')[0m
+  [1m[36mTRANSACTION (159.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+LibrariesControllerTest: test_should_show_library
+-------------------------------------------------
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/libraries/980190962" for 127.0.0.1 at 2023-04-01 16:40:57 +0300
+Processing by LibrariesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering libraries/show.html.erb within layouts/application
+  Rendered libraries/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 795)
+  Rendered layout layouts/application.html.erb (Duration: 82.5ms | Allocations: 21269)
+Completed 200 OK in 94ms (Views: 85.7ms | ActiveRecord: 0.1ms | Allocations: 25113)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+LibrariesControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/libraries" for 127.0.0.1 at 2023-04-01 16:40:57 +0300
+Processing by LibrariesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering libraries/index.html.erb within layouts/application
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries"[0m
+  Rendered libraries/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 512)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1105)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 1473)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+LibrariesControllerTest: test_should_create_library
+---------------------------------------------------
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLibrary Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+Started POST "/libraries" for 127.0.0.1 at 2023-04-01 16:40:57 +0300
+Processing by LibrariesController#create as HTML
+  Parameters: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}}
+[31mUnpermitted parameter: :id. Context: { controller: LibrariesController, action: create, request: #<ActionDispatch::Request:0x00007f58c9e4b1e0>, params: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}, "controller"=>"libraries", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLibrary Create (0.3ms)[0m  [1m[32mINSERT INTO "libraries" ("name", "address", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "MyString"], ["address", "MyString"], ["number", 1], ["created_at", "2023-04-01 13:40:57.647055"], ["updated_at", "2023-04-01 13:40:57.647055"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/libraries/980190963
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 1427)
+  [1m[36mLibrary Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+LibrariesControllerTest: test_should_destroy_library
+----------------------------------------------------
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+Started DELETE "/libraries/980190962" for 127.0.0.1 at 2023-04-01 16:40:57 +0300
+Processing by LibrariesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mLibrary Load (0.1ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLibrary Destroy (0.2ms)[0m  [1m[31mDELETE FROM "libraries" WHERE "libraries"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/libraries
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 536)
+  [1m[36mLibrary Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "libraries"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+LibrariesControllerTest: test_should_update_library
+---------------------------------------------------
+  [1m[36mLibrary Load (0.5ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/libraries/980190962" for 127.0.0.1 at 2023-04-01 16:40:57 +0300
+Processing by LibrariesController#update as HTML
+  Parameters: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}, "id"=>"980190962"}
+  [1m[36mLibrary Load (0.8ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+[31mUnpermitted parameter: :id. Context: { controller: LibrariesController, action: update, request: #<ActionDispatch::Request:0x00007f58cabca758>, params: {"library"=>{"id"=>"980190962", "name"=>"MyString", "address"=>"MyString", "number"=>"1"}, "controller"=>"libraries", "action"=>"update", "id"=>"980190962"} }[0m
+Redirected to http://www.example.com/libraries/980190962
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms | Allocations: 533)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+LibrariesControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mLibrary Load (0.2ms)[0m  [1m[34mSELECT "libraries".* FROM "libraries" WHERE "libraries"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/libraries/new" for 127.0.0.1 at 2023-04-01 16:40:57 +0300
+Processing by LibrariesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering libraries/new.html.erb within layouts/application
+  Rendered libraries/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2195)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 2796)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 3164)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 13:42:37.555294', '2023-04-01 13:42:37.555294');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 13:42:37.555294', '2023-04-01 13:42:37.555294');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 13:42:37.558456', '2023-04-01 13:42:37.558456');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 13:42:37.558456', '2023-04-01 13:42:37.558456')[0m
+  [1m[36mTRANSACTION (112.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+BooksControllerTest: test_should_update_book
+--------------------------------------------
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/books/980190962" for 127.0.0.1 at 2023-04-01 16:42:37 +0300
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"id"=>"980190962", "name"=>"MyString", "description"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+[31mUnpermitted parameter: :id. Context: { controller: BooksController, action: update, request: #<ActionDispatch::Request:0x00007fdafdb951d8>, params: {"book"=>{"id"=>"980190962", "name"=>"MyString", "description"=>"MyString"}, "controller"=>"books", "action"=>"update", "id"=>"980190962"} }[0m
+Redirected to http://www.example.com/books/980190962
+Completed 302 Found in 9ms (ActiveRecord: 0.1ms | Allocations: 2739)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+BooksControllerTest: test_should_get_new
+----------------------------------------
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/books/new" for 127.0.0.1 at 2023-04-01 16:42:37 +0300
+Processing by BooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/new.html.erb within layouts/application
+  Rendered books/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2248)
+  Rendered layout layouts/application.html.erb (Duration: 59.3ms | Allocations: 22547)
+Completed 200 OK in 68ms (Views: 63.8ms | ActiveRecord: 0.0ms | Allocations: 24715)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+BooksControllerTest: test_should_show_book
+------------------------------------------
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/books/980190962" for 127.0.0.1 at 2023-04-01 16:42:37 +0300
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 912)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1367)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+BooksControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/books" for 127.0.0.1 at 2023-04-01 16:42:37 +0300
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 420)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 951)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 1237)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+BooksControllerTest: test_should_create_book
+--------------------------------------------
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mBook Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+Started POST "/books" for 127.0.0.1 at 2023-04-01 16:42:37 +0300
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"id"=>"980190962", "name"=>"MyString", "description"=>"MyString"}}
+[31mUnpermitted parameter: :id. Context: { controller: BooksController, action: create, request: #<ActionDispatch::Request:0x00007fdafce504f0>, params: {"book"=>{"id"=>"980190962", "name"=>"MyString", "description"=>"MyString"}, "controller"=>"books", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "MyString"], ["description", "MyString"], ["created_at", "2023-04-01 13:42:37.973841"], ["updated_at", "2023-04-01 13:42:37.973841"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/books/980190963
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 957)
+  [1m[36mBook Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+BooksControllerTest: test_should_destroy_book
+---------------------------------------------
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mBook Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+Started DELETE "/books/980190962" for 127.0.0.1 at 2023-04-01 16:42:37 +0300
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Destroy (0.2ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/books
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 525)
+  [1m[36mBook Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors"[0m
+  [1m[35m (139.1ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "books"[0m
+  [1m[35m (193.8ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "libraries"[0m
+  [1m[35m (121.8ms)[0m  [1m[35mCREATE TABLE "libraries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "number" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (122.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (234.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230401134423)[0m
+  [1m[35m (314.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230401114216),
+(20230401120442);
+
+[0m
+  [1m[35m (315.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2023-04-01 14:27:48.433019"], ["updated_at", "2023-04-01 14:27:48.433019"]]
+  [1m[36mTRANSACTION (99.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "a7835dd12b7d41e73e45ba46959a9f479c8f3658"], ["created_at", "2023-04-01 14:27:48.542685"], ["updated_at", "2023-04-01 14:27:48.542685"]]
+  [1m[36mTRANSACTION (101.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 14:27:48.925794', '2023-04-01 14:27:48.925794');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 14:27:48.925794', '2023-04-01 14:27:48.925794');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 14:27:48.927183', '2023-04-01 14:27:48.927183');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 14:27:48.927183', '2023-04-01 14:27:48.927183');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 14:27:48.928081', '2023-04-01 14:27:48.928081');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 14:27:48.928081', '2023-04-01 14:27:48.928081')[0m
+  [1m[36mTRANSACTION (113.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+AuthorsControllerTest: test_should_destroy_author
+-------------------------------------------------
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mAuthor Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+Started DELETE "/books/980190962" for 127.0.0.1 at 2023-04-01 17:27:49 +0300
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBook Destroy (0.5ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/books
+Completed 302 Found in 33ms (ActiveRecord: 1.1ms | Allocations: 4469)
+  [1m[36mAuthor Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+AuthorsControllerTest: test_should_get_new
+------------------------------------------
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/authors/new" for 127.0.0.1 at 2023-04-01 17:27:49 +0300
+Processing by AuthorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2070)
+  Rendered layout layouts/application.html.erb (Duration: 122.0ms | Allocations: 22622)
+Completed 200 OK in 139ms (Views: 131.7ms | ActiveRecord: 0.0ms | Allocations: 24807)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+AuthorsControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/authors" for 127.0.0.1 at 2023-04-01 17:27:49 +0300
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 478)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1067)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 1435)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+AuthorsControllerTest: test_should_create_author
+------------------------------------------------
+  [1m[36mAuthor Load (1.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mAuthor Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+Started POST "/authors" for 127.0.0.1 at 2023-04-01 17:27:49 +0300
+Processing by AuthorsController#create as HTML
+  Parameters: {"author"=>{"id"=>"980190962", "name"=>"MyString"}}
+[31mUnpermitted parameter: :id. Context: { controller: AuthorsController, action: create, request: #<ActionDispatch::Request:0x00007fb2060d0e98>, params: {"author"=>{"id"=>"980190962", "name"=>"MyString"}, "controller"=>"authors", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Create (0.7ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "MyString"], ["created_at", "2023-04-01 14:27:49.761353"], ["updated_at", "2023-04-01 14:27:49.761353"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/authors/980190963
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms | Allocations: 1252)
+  [1m[36mAuthor Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+AuthorsControllerTest: test_should_show_author
+----------------------------------------------
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/authors/980190962" for 127.0.0.1 at 2023-04-01 17:27:49 +0300
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 378)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 953)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 1508)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+AuthorsControllerTest: test_should_update_author
+------------------------------------------------
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/authors/980190962" for 127.0.0.1 at 2023-04-01 17:27:49 +0300
+Processing by AuthorsController#update as HTML
+  Parameters: {"author"=>{"id"=>"980190962", "name"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+[31mUnpermitted parameter: :id. Context: { controller: AuthorsController, action: update, request: #<ActionDispatch::Request:0x00007fb2060909b0>, params: {"author"=>{"id"=>"980190962", "name"=>"MyString"}, "controller"=>"authors", "action"=>"update", "id"=>"980190962"} }[0m
+Redirected to http://www.example.com/authors/980190962
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 500)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "libraries";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 14:28:43.743844', '2023-04-01 14:28:43.743844');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 14:28:43.743844', '2023-04-01 14:28:43.743844');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 14:28:43.745338', '2023-04-01 14:28:43.745338');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 14:28:43.745338', '2023-04-01 14:28:43.745338');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 14:28:43.746448', '2023-04-01 14:28:43.746448');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 14:28:43.746448', '2023-04-01 14:28:43.746448')[0m
+  [1m[36mTRANSACTION (233.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+AuthorsControllerTest: test_should_destroy_author
+-------------------------------------------------
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mAuthor Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+Started DELETE "/authors/980190962" for 127.0.0.1 at 2023-04-01 17:28:44 +0300
+Processing by AuthorsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAuthor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/authors
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 2392)
+  [1m[36mAuthor Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors"[0m
+  [1m[35m (130.9ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "books"[0m
+  [1m[35m (145.4ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "genres"[0m
+  [1m[35m (128.9ms)[0m  [1m[35mCREATE TABLE "genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "libraries"[0m
+  [1m[35m (225.3ms)[0m  [1m[35mCREATE TABLE "libraries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "number" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (156.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (106.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230401143228)[0m
+  [1m[35m (98.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230401114216),
+(20230401120442),
+(20230401134423);
+
+[0m
+  [1m[35m (204.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2023-04-01 14:50:48.220978"], ["updated_at", "2023-04-01 14:50:48.220978"]]
+  [1m[36mTRANSACTION (96.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "a82e26f77c6dc2577880d4cfa0ee51c7b46deb93"], ["created_at", "2023-04-01 14:50:48.328607"], ["updated_at", "2023-04-01 14:50:48.328607"]]
+  [1m[36mTRANSACTION (99.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 14:50:48.675114', '2023-04-01 14:50:48.675114');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 14:50:48.675114', '2023-04-01 14:50:48.675114');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 14:50:48.676785', '2023-04-01 14:50:48.676785');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 14:50:48.676785', '2023-04-01 14:50:48.676785');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 14:50:48.677649', '2023-04-01 14:50:48.677649');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 14:50:48.677649', '2023-04-01 14:50:48.677649');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 14:50:48.678530', '2023-04-01 14:50:48.678530');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 14:50:48.678530', '2023-04-01 14:50:48.678530')[0m
+  [1m[36mTRANSACTION (114.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+GenresControllerTest: test_should_destroy_genres
+------------------------------------------------
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mGenre Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+Started DELETE "/genres/980190962" for 127.0.0.1 at 2023-04-01 17:50:48 +0300
+Processing by GenresController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGenre Destroy (0.2ms)[0m  [1m[31mDELETE FROM "genres" WHERE "genres"."id" = ?[0m  [["id", 980190962]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/genres
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 2405)
+  [1m[36mGenre Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+GenresControllerTest: test_should_get_new
+-----------------------------------------
+  [1m[36mGenre Load (0.2ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/genres/new" for 127.0.0.1 at 2023-04-01 17:50:48 +0300
+Processing by GenresController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering genres/new.html.erb within layouts/application
+  Rendered genres/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2064)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 22600)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.0ms | Allocations: 24768)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+GenresControllerTest: test_should_show_genres
+---------------------------------------------
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/genres/980190962" for 127.0.0.1 at 2023-04-01 17:50:49 +0300
+Processing by GenresController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering genres/show.html.erb within layouts/application
+  Rendered genres/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 362)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 886)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.1ms | Allocations: 1340)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+GenresControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/genres" for 127.0.0.1 at 2023-04-01 17:50:49 +0300
+Processing by GenresController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  Rendered genres/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 402)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 933)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 1219)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+GenresControllerTest: test_should_create_genres
+-----------------------------------------------
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mGenre Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+Started POST "/genres" for 127.0.0.1 at 2023-04-01 17:50:49 +0300
+Processing by GenresController#create as HTML
+  Parameters: {"genre"=>{"id"=>"980190962", "name"=>"MyString"}}
+[31mUnpermitted parameter: :id. Context: { controller: GenresController, action: create, request: #<ActionDispatch::Request:0x00007f9d05f240c8>, params: {"genre"=>{"id"=>"980190962", "name"=>"MyString"}, "controller"=>"genres", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "MyString"], ["created_at", "2023-04-01 14:50:49.053582"], ["updated_at", "2023-04-01 14:50:49.053582"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/genres/980190963
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 1211)
+  [1m[36mGenre Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+GenresControllerTest: test_should_update_genres
+-----------------------------------------------
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/genres/980190962" for 127.0.0.1 at 2023-04-01 17:50:49 +0300
+Processing by GenresController#update as HTML
+  Parameters: {"genre"=>{"id"=>"980190962", "name"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mGenre Load (0.1ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+[31mUnpermitted parameter: :id. Context: { controller: GenresController, action: update, request: #<ActionDispatch::Request:0x00007f9d05f01028>, params: {"genre"=>{"id"=>"980190962", "name"=>"MyString"}, "controller"=>"genres", "action"=>"update", "id"=>"980190962"} }[0m
+Redirected to http://www.example.com/genres/980190962
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 508)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (11.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (18.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "authors"[0m
+  [1m[35m (139.5ms)[0m  [1m[35mCREATE TABLE "authors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "books"[0m
+  [1m[35m (121.6ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "genres"[0m
+  [1m[35m (132.3ms)[0m  [1m[35mCREATE TABLE "genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "libraries"[0m
+  [1m[35m (154.0ms)[0m  [1m[35mCREATE TABLE "libraries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "number" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (121.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (122.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (122.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (121.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (105.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230401151455)[0m
+  [1m[35m (98.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230401114216),
+(20230401120442),
+(20230401134423),
+(20230401143228);
+
+[0m
+  [1m[35m (263.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2023-04-01 15:26:24.654367"], ["updated_at", "2023-04-01 15:26:24.654367"]]
+  [1m[36mTRANSACTION (105.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "9e4177f3718e132a8d1d52a279a6b3998506b883"], ["created_at", "2023-04-01 15:26:24.773253"], ["updated_at", "2023-04-01 15:26:24.773253"]]
+  [1m[36mTRANSACTION (97.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.8ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.163161', '2023-04-01 15:26:25.163161');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.163161', '2023-04-01 15:26:25.163161');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:26:25.167497', '2023-04-01 15:26:25.167497');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:26:25.167497', '2023-04-01 15:26:25.167497');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.170664', '2023-04-01 15:26:25.170664');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.170664', '2023-04-01 15:26:25.170664');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.172834', '2023-04-01 15:26:25.172834');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.172834', '2023-04-01 15:26:25.172834');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:26:25.175313', '2023-04-01 15:26:25.175313');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:26:25.175313', '2023-04-01 15:26:25.175313')[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.382768', '2023-04-01 15:26:25.382768');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.382768', '2023-04-01 15:26:25.382768');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:26:25.382877', '2023-04-01 15:26:25.382877');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:26:25.382877', '2023-04-01 15:26:25.382877');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.382959', '2023-04-01 15:26:25.382959');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.382959', '2023-04-01 15:26:25.382959');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.383021', '2023-04-01 15:26:25.383021');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.383021', '2023-04-01 15:26:25.383021');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:26:25.383088', '2023-04-01 15:26:25.383088');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:26:25.383088', '2023-04-01 15:26:25.383088')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.9ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.397258', '2023-04-01 15:26:25.397258');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.397258', '2023-04-01 15:26:25.397258');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:26:25.397340', '2023-04-01 15:26:25.397340');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:26:25.397340', '2023-04-01 15:26:25.397340');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.397397', '2023-04-01 15:26:25.397397');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.397397', '2023-04-01 15:26:25.397397');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.397455', '2023-04-01 15:26:25.397455');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.397455', '2023-04-01 15:26:25.397455');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:26:25.397506', '2023-04-01 15:26:25.397506');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:26:25.397506', '2023-04-01 15:26:25.397506')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.413317', '2023-04-01 15:26:25.413317');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.413317', '2023-04-01 15:26:25.413317');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:26:25.413397', '2023-04-01 15:26:25.413397');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:26:25.413397', '2023-04-01 15:26:25.413397');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.413448', '2023-04-01 15:26:25.413448');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.413448', '2023-04-01 15:26:25.413448');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.413490', '2023-04-01 15:26:25.413490');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.413490', '2023-04-01 15:26:25.413490');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:26:25.413540', '2023-04-01 15:26:25.413540');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:26:25.413540', '2023-04-01 15:26:25.413540')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.424730', '2023-04-01 15:26:25.424730');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.424730', '2023-04-01 15:26:25.424730');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:26:25.424816', '2023-04-01 15:26:25.424816');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:26:25.424816', '2023-04-01 15:26:25.424816');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.424870', '2023-04-01 15:26:25.424870');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.424870', '2023-04-01 15:26:25.424870');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.424911', '2023-04-01 15:26:25.424911');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.424911', '2023-04-01 15:26:25.424911');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:26:25.424955', '2023-04-01 15:26:25.424955');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:26:25.424955', '2023-04-01 15:26:25.424955')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.456347', '2023-04-01 15:26:25.456347');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.456347', '2023-04-01 15:26:25.456347');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:26:25.456403', '2023-04-01 15:26:25.456403');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:26:25.456403', '2023-04-01 15:26:25.456403');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:26:25.456448', '2023-04-01 15:26:25.456448');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:26:25.456448', '2023-04-01 15:26:25.456448');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.456502', '2023-04-01 15:26:25.456502');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:26:25.456502', '2023-04-01 15:26:25.456502');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:26:25.456534', '2023-04-01 15:26:25.456534');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:26:25.456534', '2023-04-01 15:26:25.456534')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.615859', '2023-04-01 15:52:19.615859');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.615859', '2023-04-01 15:52:19.615859');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:52:19.617498', '2023-04-01 15:52:19.617498');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:52:19.617498', '2023-04-01 15:52:19.617498');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.619039', '2023-04-01 15:52:19.619039');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.619039', '2023-04-01 15:52:19.619039');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.619980', '2023-04-01 15:52:19.619980');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.619980', '2023-04-01 15:52:19.619980');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:52:19.620909', '2023-04-01 15:52:19.620909');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:52:19.620909', '2023-04-01 15:52:19.620909')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.725913', '2023-04-01 15:52:19.725913');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.725913', '2023-04-01 15:52:19.725913');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:52:19.726021', '2023-04-01 15:52:19.726021');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:52:19.726021', '2023-04-01 15:52:19.726021');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.726076', '2023-04-01 15:52:19.726076');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.726076', '2023-04-01 15:52:19.726076');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.726121', '2023-04-01 15:52:19.726121');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.726121', '2023-04-01 15:52:19.726121');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:52:19.726210', '2023-04-01 15:52:19.726210');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:52:19.726210', '2023-04-01 15:52:19.726210')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.742706', '2023-04-01 15:52:19.742706');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.742706', '2023-04-01 15:52:19.742706');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:52:19.742784', '2023-04-01 15:52:19.742784');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:52:19.742784', '2023-04-01 15:52:19.742784');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.742841', '2023-04-01 15:52:19.742841');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.742841', '2023-04-01 15:52:19.742841');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.742897', '2023-04-01 15:52:19.742897');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.742897', '2023-04-01 15:52:19.742897');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:52:19.742967', '2023-04-01 15:52:19.742967');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:52:19.742967', '2023-04-01 15:52:19.742967')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.751111', '2023-04-01 15:52:19.751111');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.751111', '2023-04-01 15:52:19.751111');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:52:19.751211', '2023-04-01 15:52:19.751211');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:52:19.751211', '2023-04-01 15:52:19.751211');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.751247', '2023-04-01 15:52:19.751247');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.751247', '2023-04-01 15:52:19.751247');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.751273', '2023-04-01 15:52:19.751273');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.751273', '2023-04-01 15:52:19.751273');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:52:19.751303', '2023-04-01 15:52:19.751303');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:52:19.751303', '2023-04-01 15:52:19.751303')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.760082', '2023-04-01 15:52:19.760082');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.760082', '2023-04-01 15:52:19.760082');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:52:19.760137', '2023-04-01 15:52:19.760137');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:52:19.760137', '2023-04-01 15:52:19.760137');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.760167', '2023-04-01 15:52:19.760167');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.760167', '2023-04-01 15:52:19.760167');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.760200', '2023-04-01 15:52:19.760200');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.760200', '2023-04-01 15:52:19.760200');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:52:19.760228', '2023-04-01 15:52:19.760228');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:52:19.760228', '2023-04-01 15:52:19.760228')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.9ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.768630', '2023-04-01 15:52:19.768630');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.768630', '2023-04-01 15:52:19.768630');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 15:52:19.768689', '2023-04-01 15:52:19.768689');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 15:52:19.768689', '2023-04-01 15:52:19.768689');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 15:52:19.768725', '2023-04-01 15:52:19.768725');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 15:52:19.768725', '2023-04-01 15:52:19.768725');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.768765', '2023-04-01 15:52:19.768765');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 15:52:19.768765', '2023-04-01 15:52:19.768765');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 15:52:19.768925', '2023-04-01 15:52:19.768925');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 15:52:19.768925', '2023-04-01 15:52:19.768925')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.050787', '2023-04-01 16:04:31.050787');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.050787', '2023-04-01 16:04:31.050787');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:04:31.052485', '2023-04-01 16:04:31.052485');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:04:31.052485', '2023-04-01 16:04:31.052485');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.053489', '2023-04-01 16:04:31.053489');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.053489', '2023-04-01 16:04:31.053489');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.054352', '2023-04-01 16:04:31.054352');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.054352', '2023-04-01 16:04:31.054352');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:04:31.055482', '2023-04-01 16:04:31.055482');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:04:31.055482', '2023-04-01 16:04:31.055482')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.164396', '2023-04-01 16:04:31.164396');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.164396', '2023-04-01 16:04:31.164396');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:04:31.164480', '2023-04-01 16:04:31.164480');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:04:31.164480', '2023-04-01 16:04:31.164480');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.164536', '2023-04-01 16:04:31.164536');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.164536', '2023-04-01 16:04:31.164536');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.164565', '2023-04-01 16:04:31.164565');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.164565', '2023-04-01 16:04:31.164565');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:04:31.164596', '2023-04-01 16:04:31.164596');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:04:31.164596', '2023-04-01 16:04:31.164596')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.174365', '2023-04-01 16:04:31.174365');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.174365', '2023-04-01 16:04:31.174365');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:04:31.174427', '2023-04-01 16:04:31.174427');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:04:31.174427', '2023-04-01 16:04:31.174427');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.174459', '2023-04-01 16:04:31.174459');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.174459', '2023-04-01 16:04:31.174459');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.174485', '2023-04-01 16:04:31.174485');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.174485', '2023-04-01 16:04:31.174485');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:04:31.174513', '2023-04-01 16:04:31.174513');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:04:31.174513', '2023-04-01 16:04:31.174513')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.182366', '2023-04-01 16:04:31.182366');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.182366', '2023-04-01 16:04:31.182366');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:04:31.182428', '2023-04-01 16:04:31.182428');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:04:31.182428', '2023-04-01 16:04:31.182428');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.182464', '2023-04-01 16:04:31.182464');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.182464', '2023-04-01 16:04:31.182464');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.182494', '2023-04-01 16:04:31.182494');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.182494', '2023-04-01 16:04:31.182494');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:04:31.182522', '2023-04-01 16:04:31.182522');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:04:31.182522', '2023-04-01 16:04:31.182522')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.191364', '2023-04-01 16:04:31.191364');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.191364', '2023-04-01 16:04:31.191364');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:04:31.191422', '2023-04-01 16:04:31.191422');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:04:31.191422', '2023-04-01 16:04:31.191422');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.191459', '2023-04-01 16:04:31.191459');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.191459', '2023-04-01 16:04:31.191459');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.191484', '2023-04-01 16:04:31.191484');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.191484', '2023-04-01 16:04:31.191484');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:04:31.191512', '2023-04-01 16:04:31.191512');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:04:31.191512', '2023-04-01 16:04:31.191512')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.199300', '2023-04-01 16:04:31.199300');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.199300', '2023-04-01 16:04:31.199300');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:04:31.199356', '2023-04-01 16:04:31.199356');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:04:31.199356', '2023-04-01 16:04:31.199356');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:04:31.199387', '2023-04-01 16:04:31.199387');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:04:31.199387', '2023-04-01 16:04:31.199387');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.199413', '2023-04-01 16:04:31.199413');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:04:31.199413', '2023-04-01 16:04:31.199413');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:04:31.199440', '2023-04-01 16:04:31.199440');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:04:31.199440', '2023-04-01 16:04:31.199440')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.424687', '2023-04-01 16:06:01.424687');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.424687', '2023-04-01 16:06:01.424687');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:06:01.426297', '2023-04-01 16:06:01.426297');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:06:01.426297', '2023-04-01 16:06:01.426297');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.427166', '2023-04-01 16:06:01.427166');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.427166', '2023-04-01 16:06:01.427166');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.427965', '2023-04-01 16:06:01.427965');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.427965', '2023-04-01 16:06:01.427965');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:06:01.429067', '2023-04-01 16:06:01.429067');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:06:01.429067', '2023-04-01 16:06:01.429067')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.551346', '2023-04-01 16:06:01.551346');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.551346', '2023-04-01 16:06:01.551346');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:06:01.551405', '2023-04-01 16:06:01.551405');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:06:01.551405', '2023-04-01 16:06:01.551405');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.551435', '2023-04-01 16:06:01.551435');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.551435', '2023-04-01 16:06:01.551435');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.551460', '2023-04-01 16:06:01.551460');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.551460', '2023-04-01 16:06:01.551460');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:06:01.551487', '2023-04-01 16:06:01.551487');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:06:01.551487', '2023-04-01 16:06:01.551487')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.559990', '2023-04-01 16:06:01.559990');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.559990', '2023-04-01 16:06:01.559990');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:06:01.560072', '2023-04-01 16:06:01.560072');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:06:01.560072', '2023-04-01 16:06:01.560072');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.560128', '2023-04-01 16:06:01.560128');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.560128', '2023-04-01 16:06:01.560128');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.560177', '2023-04-01 16:06:01.560177');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.560177', '2023-04-01 16:06:01.560177');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:06:01.560230', '2023-04-01 16:06:01.560230');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:06:01.560230', '2023-04-01 16:06:01.560230')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.570321', '2023-04-01 16:06:01.570321');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.570321', '2023-04-01 16:06:01.570321');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:06:01.570405', '2023-04-01 16:06:01.570405');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:06:01.570405', '2023-04-01 16:06:01.570405');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.570461', '2023-04-01 16:06:01.570461');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.570461', '2023-04-01 16:06:01.570461');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.570511', '2023-04-01 16:06:01.570511');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.570511', '2023-04-01 16:06:01.570511');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:06:01.570564', '2023-04-01 16:06:01.570564');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:06:01.570564', '2023-04-01 16:06:01.570564')[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.585904', '2023-04-01 16:06:01.585904');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.585904', '2023-04-01 16:06:01.585904');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:06:01.585966', '2023-04-01 16:06:01.585966');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:06:01.585966', '2023-04-01 16:06:01.585966');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.586069', '2023-04-01 16:06:01.586069');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.586069', '2023-04-01 16:06:01.586069');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.586098', '2023-04-01 16:06:01.586098');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.586098', '2023-04-01 16:06:01.586098');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:06:01.586126', '2023-04-01 16:06:01.586126');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:06:01.586126', '2023-04-01 16:06:01.586126')[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "authors";
+DELETE FROM "books";
+DELETE FROM "genres";
+DELETE FROM "libraries";
+DELETE FROM "users";
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.599531', '2023-04-01 16:06:01.599531');
+INSERT INTO "authors" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.599531', '2023-04-01 16:06:01.599531');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2023-04-01 16:06:01.599637', '2023-04-01 16:06:01.599637');
+INSERT INTO "books" ("id", "name", "description", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2023-04-01 16:06:01.599637', '2023-04-01 16:06:01.599637');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (980190962, 'MyString', '2023-04-01 16:06:01.599702', '2023-04-01 16:06:01.599702');
+INSERT INTO "genres" ("id", "name", "created_at", "updated_at") VALUES (298486374, 'MyString', '2023-04-01 16:06:01.599702', '2023-04-01 16:06:01.599702');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.599761', '2023-04-01 16:06:01.599761');
+INSERT INTO "libraries" ("id", "name", "address", "number", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', 1, '2023-04-01 16:06:01.599761', '2023-04-01 16:06:01.599761');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2023-04-01 16:06:01.599822', '2023-04-01 16:06:01.599822');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2023-04-01 16:06:01.599822', '2023-04-01 16:06:01.599822')[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m

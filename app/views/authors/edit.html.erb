@@ -1,0 +1,12 @@
+<h2>Edit author</h2>
+<%= form_for :author, url: author_path(@author), method: :patch do |f| %>
+
+  <p>
+    Author name<br>
+    <%= f.text_field(:name, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-success'}) %>
+  </p>
+<% end %>

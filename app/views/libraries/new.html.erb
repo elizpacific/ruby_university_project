@@ -1,24 +1,36 @@
 <h2>Add new library</h2>
 <%= form_for :library, url: libraries_path do |f| %>
-  <% if @library.errors.any? %>
-    <% @library.errors.full_messages.each do |msg| %>
-      <div class="alert alert-danger"><%= msg %></div>
-    <% end %>
-  <% end %>
   <p>
     Library name<br>
     <%= f.text_field(:name, {:class => 'form-control'}) %>
   </p>
   <p>
-    Library address<br>
-    <%= f.text_area(:address, {:class => 'form-control'}) %>
+    Library number<br>
+    <%= f.text_field(:library_id, {:class => 'form-control'}) %>
   </p>
   <p>
-    Library number<br>
-    <%= f.text_area(:number, {:class => 'form-control'}) %>
+    Library address<br>
+    <%= f.text_field(:street_address, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    Library city<br>
+    <%= f.text_field(:city, {:class => 'form-control'}) %>
+  </p>
+  <p>
+    Library zip code<br>
+    <%= f.number_field(:zip_code, {:class => 'form-control'}) %>
   </p>
 
+    <div class="field">
+      <%= f.label :images %>
+      <br>
+      <%= f.file_field :images, multiple: true %>
+
+    </div>
+
   <p>
-    <%= f.submit({:class => 'btn btn-success'}) %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </p>
 <% end %>
